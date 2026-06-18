@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-black text-foreground antialiased;
+  }
+
+  ::selection {
+    @apply bg-accent/30 text-foreground;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-fuchsia-300 via-fuchsia-400 to-purple-400 bg-clip-text text-transparent;
+  }
+
+  .section-padding {
+    @apply px-4 py-20 sm:px-6 md:px-8 lg:px-12 xl:px-16;
+  }
+
+  .container-max {
+    @apply mx-auto max-w-6xl;
+  }
+
+  .site-sections-bg {
+    @apply bg-black;
+  }
+}
+
+/* Custom scrollbar for dark theme */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8b5cf6;
+}
